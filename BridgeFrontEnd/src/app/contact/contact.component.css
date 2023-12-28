@@ -1,0 +1,62 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin: 0;
+    background-color: orange;
+    border-radius: 10px;
+    max-width: 800px; /* Set the maximum width of the container */
+    width: 100%; /* Make sure it takes 100% width within the max-width */
+    margin-left: 23%;
+
+}
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px; /* Set your desired font size */
+    color: black; /* Set the text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 18px; /* Set your desired font size */
+    color: black; /* Set the text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(199, 60, 36);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkorange;
+}

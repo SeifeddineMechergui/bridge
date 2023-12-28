@@ -1,0 +1,61 @@
+.courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Adjust padding as needed */
+    margin-left: 75px;
+    margin-right: 75px;
+
+}
+
+.courses-header p {
+    font-weight: bold; /* Make the text bold */
+    margin: 0; /* Remove default margin to avoid spacing issues */
+    font-size: larger;  
+}
+
+.courses-header button {
+    background-color: rgb(87, 84, 87); /* Purple color for the button */
+    color: white; /* White text color for better contrast */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border: none; /* Remove button border */
+    border-radius: 25px; /* Border radius for rounded corners */
+    cursor: pointer;
+}
+
+.cours-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .cours {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .cours img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .cours h2 {
+    margin-top: 10px;
+  }
+  
+  .cours p {
+    color: rgb(134, 78, 88);
+    font-size: larger;
+    font-weight: bold;
+    
+  }
+
+  .courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
