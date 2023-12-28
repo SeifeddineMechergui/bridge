@@ -1,0 +1,35 @@
+
+
+.banner{
+    background-image: url(../../assets/banner.png);
+    height: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.textbnr {
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.7); /* White background with 70% transparency */
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+
+}
+
+.textbnr button {
+    background-color: rgb(87, 84, 87); /* Purple color for the button */
+    color: white; /* White text color for better contrast */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border: none; /* Remove button border */
+    border-radius: 25px; /* Border radius for rounded corners */
+    cursor: pointer;
+}
