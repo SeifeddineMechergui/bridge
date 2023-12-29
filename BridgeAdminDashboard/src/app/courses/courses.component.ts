@@ -7,6 +7,8 @@ import { CourseService } from '../course.service';
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css']
 })
+
+
 export class CoursesComponent implements OnInit {
   courses: any[] = [];
   courseObject: any = {};
@@ -52,26 +54,35 @@ export class CoursesComponent implements OnInit {
   }
 
   updateExistingCourse(): void {
+    console.log('Update method called');
+
     if (this.selectedCourse) {
-      const updatedCourse = { ...this.selectedCourse };
-  
-      this.courseService.updateCourse(updatedCourse, this.selectedCourse.id)
-        .subscribe(
-          (response) => {
-            console.log('Course updated successfully:', response);
-            this.getAllCourses();
-            this.showNewCourseForm = false;
-            this.clearForm();
-            this.selectedCourse = null;
-          },
-          (error) => {
-            console.error('Error updating course:', error);
-          }
-        );
+        console.log('Updating course:', this.selectedCourse);
+
+        const updatedCourse = {
+            title: this.courseObject.title,  // Use courseObject for title
+            price: this.courseObject.price,  // Use courseObject for price
+            image: this.courseObject.image
+        };
+
+        this.courseService.updateCourse(updatedCourse, this.selectedCourse.id)
+            .subscribe(
+                (response) => {
+                    console.log('Course updated successfully:', response);
+                    this.getAllCourses();
+                    this.showNewCourseForm = false;
+                    this.clearForm();
+                    this.selectedCourse = null;
+                },
+                (error) => {
+                    console.error('Error updating course:', error);
+                }
+            );
     }
-  }
-  
-  
+}
+
+
+
 
   updateCourse(course: any): void {
     this.selectedCourse = { ...course };

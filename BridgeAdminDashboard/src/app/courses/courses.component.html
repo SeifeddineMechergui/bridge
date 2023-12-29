@@ -1,42 +1,41 @@
+<!-- courses.component.html -->
 <div class="courses-header">
-    <p>{{ getFormHeader() }}</p>
-    <button (click)="toggleNewCourseForm()">Add new</button>
-  </div>
-  
-  <div class="courses">
-    <div class="cours-container" *ngFor="let course of courses">
+  <p>{{ getFormHeader() }}</p>
+  <button (click)="toggleNewCourseForm()">Add new</button>
+</div>
+
+<div class="courses">
+  <div class="cours-container" *ngFor="let course of courses">
       <div class="cours">
-        <img [src]="course.image" alt="Course Image">
-        <h2>{{ course.title }}</h2>
-        <p>Prix: {{ course.price }} €</p>
-        <button (click)="updateCourse(course)">Update</button>
-        <button (click)="deleteCourse(course.id)">Delete</button>
+          <img [src]="course.image" alt="Course Image">
+          <h2>{{ course.title }}</h2>
+          <p>Prix: {{ course.price }} €</p>
+          <button (click)="updateCourse(course)">Update</button>
+          <button (click)="deleteCourse(course.id)">Delete</button>
       </div>
-    </div>
   </div>
-  
-  <!-- New course form -->
-  <div class="new-course-form" *ngIf="showNewCourseForm">
-    <div class="mb-3">
-      <label for="courseTitle" class="form-label">Course Title</label>
-      <input type="text" class="form-control" id="courseTitle" [(ngModel)]="selectedCourse ? selectedCourse.title : courseObject.title" placeholder="Enter course title">
-    </div>
-  
-    <div class="mb-3">
-      <label for="coursePrice" class="form-label">Course Price (€)</label>
-      <input type="number" class="form-control" id="coursePrice" [(ngModel)]="selectedCourse ? selectedCourse.price : courseObject.price" placeholder="Enter course price">
-    </div>
-  
-    <div class="mb-3">
+</div>
+
+<!-- New course form -->
+<div class="new-course-form" *ngIf="showNewCourseForm">
+  <div class="mb-3">
+    <label for="courseTitle" class="form-label">Course Title</label>
+    <input type="text" class="form-control" id="courseTitle" [(ngModel)]="courseObject.title" placeholder="Enter course title">
+</div>
+
+<div class="mb-3">
+    <label for="coursePrice" class="form-label">Course Price (€)</label>
+    <input type="number" class="form-control" id="coursePrice" [(ngModel)]="courseObject.price" placeholder="Enter course price">
+</div>
+  <div class="mb-3">
       <label for="courseImage" class="form-label">Course Image</label>
       <input type="file" class="form-control" id="courseImage" (change)="onImageChange($event)" accept="image/*">
-    </div>
-  
-    <!-- Display preview image if needed -->
-    <img id="previewImage" [src]="courseObject.image" alt="Preview Image">
-  
-    <button (click)="selectedCourse ? updateExistingCourse() : addNewCourse()">
-      {{ getButtonLabel() }}
-    </button>
   </div>
-  
+
+  <!-- Display preview image if needed -->
+  <img id="previewImage" [src]="courseObject.image" alt="Preview Image">
+
+  <button (click)="selectedCourse ? updateExistingCourse() : addNewCourse()">
+    {{ getButtonLabel() }}
+  </button>
+</div>

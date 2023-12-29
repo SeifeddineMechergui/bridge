@@ -1,4 +1,4 @@
-// Import necessary modules
+// course.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
@@ -38,10 +38,9 @@ export class CourseService {
   updateCourse(course: any, id: number): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-  
-    // Omit the 'id' property from the course object
+
     const { id: courseId, ...updatedCourse } = course;
-  
+
     return this.http.put<any>(url, updatedCourse, { headers })
       .pipe(
         catchError(this.handleError)
