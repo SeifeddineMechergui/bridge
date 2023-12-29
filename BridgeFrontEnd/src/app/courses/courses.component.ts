@@ -27,5 +27,4 @@ export class CourseComponent implements OnInit {
     );
   }
 
-  // Implement methods to create, update, and delete courses
 }

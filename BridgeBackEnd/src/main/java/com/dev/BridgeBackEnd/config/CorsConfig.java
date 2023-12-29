@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/admin/courses")
-                        .allowedOrigins("*"); // Allow all origins during development
+                        .allowedOrigins("*");
             }
         };
     }
