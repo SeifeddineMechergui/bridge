@@ -1,5 +1,5 @@
+// Course.java
 package com.dev.BridgeBackEnd.models;
-
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,6 +16,5 @@ public class Course {
 
     private String title;
     private double price;
-    private String imageUrl;
-
+    private String image;
 }
