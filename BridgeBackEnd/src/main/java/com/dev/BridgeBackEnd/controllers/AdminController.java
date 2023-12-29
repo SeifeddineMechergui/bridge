@@ -10,7 +10,8 @@ import java.io.File;
 import java.util.List;
 @RestController
 @RequestMapping("/admin/courses")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:4201"})
+
 public class AdminController {
 
     @Autowired
