@@ -14,8 +14,9 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/admin/courses")
-                        .allowedOrigins("http://localhost:4200");
+                        .allowedOrigins("*"); // Allow all origins during development
             }
         };
     }
 }
+

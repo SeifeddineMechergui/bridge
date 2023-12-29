@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 import java.util.List;
-
 @RestController
 @RequestMapping("/admin/courses")
 @CrossOrigin(origins = "http://localhost:4200")
